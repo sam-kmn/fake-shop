@@ -1,0 +1,57 @@
+@import "bootstrap/scss/functions";
+@import 'bootstrap/scss/variables';
+
+.cart-header{
+  padding: 2.5rem 0rem;
+  text-align: center;
+  font-size: 3rem !important;
+}
+
+.cart-table{
+
+  .cart-product{
+    align-items: center;
+    vertical-align: middle;
+
+    .cart-product-delete{
+      color: $red-500;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .cart-product-amount-wrapper{
+      display: inline-flex;
+      flex-direction: row;
+      border: 1px solid $gray-300;
+      border-radius: .3rem;
+      font-weight: bold;
+      color: $blue-500;
+
+      .cart-product-amount{
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid $gray-300;
+        border-right: 1px solid $gray-300;
+        
+      }
+      
+      .cart-product-amount-btn{
+        font-weight: bold;
+        background-color: transparent;
+        width: 2rem;
+        height: 2rem;
+        border: 0px;
+        color: inherit;
+      }
+    }
+  }
+}
+
+.cart-total{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: end;
+}

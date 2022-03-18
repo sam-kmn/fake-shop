@@ -1,0 +1,45 @@
+@import "bootstrap/scss/functions";
+@import 'bootstrap/scss/variables';
+
+.product{
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  gap: .3rem;
+
+  &:hover{
+    border-radius: 1rem;
+    // border: 1px solid blue;
+    -webkit-box-shadow: 3px 3px 24px 0px rgba(181, 181, 181, 1);
+    -moz-box-shadow: 3px 3px 24px 0px rgba(181, 181, 181, 1);
+    box-shadow: 3px 3px 24px 0px rgba(181, 181, 181, 1);
+  }
+  
+  .product-link{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+
+    .product-image{
+      height: 12rem !important;
+      object-fit: contain;
+    }
+    .product-title{
+      padding-top: 1rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+  }
+
+  .product-price{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+}

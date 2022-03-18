@@ -1,0 +1,37 @@
+@import "../index.css";
+
+.navbar{
+  padding: 0px !important;
+  // background-color: var(--palette-3) !important;
+  background-color: white;
+
+  .navbar-brand{
+    padding: 0px !important;
+    font-family: "Amatic SC";
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(97, 89, 207) !important;
+    // font-family: "Hubballi";
+  }
+
+  .cart-icon{
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav{
+    gap: 2rem;
+    align-items: center;
+
+    .nav-item{
+      font-family: "Hubballi";
+      font-size: 1.5rem;
+
+      .nav-link{
+        color: black !important;
+        &.active{
+          color: blue !important;
+        }
+      }
+    }
+  }
+}
