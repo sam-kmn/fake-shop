@@ -1,29 +1,27 @@
-export const fetch_categories = (categories) => {
-  return {
-    type: 'FETCH_CATEGORIES',
-    payload: categories
-  }
-}
-
-
-
-// export const fetch_categories_pending = () => {
-//   return {
-//     type: 'FETCH_CATEGORIES'
-//   }
-// }
-
-// export const fetch_categories_success = (categories) => {
+// export const fetch_categories = (categories) => {
 //   return {
 //     type: 'FETCH_CATEGORIES',
 //     payload: categories
 //   }
 // }
 
-// export const fetch_categories_error = (error) => {
-//   return {
-//     type: 'FETCH_CATEGORIES',
-//     error: error
-//   }
-// }
+export const fetch_categories_pending = () => {
+  return {
+    type: 'FETCH_CATEGORIES_PENDING'
+  }
+}
+
+export const fetch_categories_success = (data) => {
+  return {
+    type: 'FETCH_CATEGORIES_SUCCESS',
+    payload: data
+  }
+}
+
+export const fetch_categories_error = (error) => {
+  return {
+    type: 'FETCH_CATEGORIES_ERROR',
+    error: error
+  }
+}
 

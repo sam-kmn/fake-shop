@@ -6,7 +6,7 @@ import '../styles/Home.scss'
 
 const Home = () => {
   
-  const products = useSelector(state => state.products)
+  const products = useSelector(state => state.products.data)
 
   return (<>
     <div className="test">

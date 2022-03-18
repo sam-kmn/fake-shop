@@ -5,7 +5,7 @@ import { IoCartOutline } from 'react-icons/io5'
 
 const Navbar = () => {
 
-  const categories = useSelector(state => state.categories)
+  const categories = useSelector(state => state.categories.data)
   const cart = useSelector(state => state.cart)
 
   return (
