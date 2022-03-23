@@ -32,12 +32,13 @@ const products = (state = initialState, action) => {
 
     case 'SORT_PRODUCTS_PRICE': {
       if(!state.data.length) return {...state}
-      const newData = [...state.data]
 
-      newData.sort((a, b) => {
-        if(a.price > b.price)   return (action.key.split(' ')[0] === 'Lowest' ? 1 : -1);
-        if(a.price === b.price)  return 0;
-        if(a.price < b.price)   return (action.key.split(' ')[0] === 'Lowest' ? -1 : 1);
+      const newData = [...state.data].sort((a, b) => {
+        let result
+        if(a.price > b.price)     result = (action.key.split(' ')[0] === 'Lowest' ? 1 : -1);
+        if(a.price === b.price)   result = 0;
+        if(a.price < b.price)     result = (action.key.split(' ')[0] === 'Lowest' ? -1 : 1);
+        return result
       })
 
       return {
@@ -51,12 +52,13 @@ const products = (state = initialState, action) => {
 
     case 'SORT_PRODUCTS_RATE': {
       if(!state.data.length) return {...state}
-      const newData = [...state.data]
 
-      newData.sort((a, b) => {
-        if(a.rating.rate > b.rating.rate)   return (action.key.split(' ')[0] === 'Lowest' ? 1 : -1);
-        if(a.rating.rate === b.rating.rate)  return 0;
-        if(a.rating.rate < b.rating.rate)   return (action.key.split(' ')[0] === 'Lowest' ? -1 : 1);
+      const newData = [...state.data].sort((a, b) => {
+        let result
+        if(a.rating.rate > b.rating.rate)     result = (action.key.split(' ')[0] === 'Lowest' ? 1 : -1);
+        if(a.rating.rate === b.rating.rate)   result = 0;
+        if(a.rating.rate < b.rating.rate)     result = (action.key.split(' ')[0] === 'Lowest' ? -1 : 1);
+        return result
       })
 
       return {
@@ -70,12 +72,13 @@ const products = (state = initialState, action) => {
     
     case 'SORT_PRODUCTS_POPULAR': {
       if(!state.data.length) return {...state}
-      const newData = [...state.data]
 
-      newData.sort((a, b) => {
-        if(a.rating.count > b.rating.count)   return (action.key.split(' ')[0] === 'Lowest' ? 1 : -1);
-        if(a.rating.count === b.rating.count)  return 0;
-        if(a.rating.count < b.rating.count)   return (action.key.split(' ')[0] === 'Lowest' ? -1 : 1);
+      const newData = [...state.data].sort((a, b) => {
+        let result
+        if(a.rating.count > b.rating.count)   result = (action.key.split(' ')[0] === 'Lowest' ? 1 : -1);
+        if(a.rating.count === b.rating.count) result = 0;
+        if(a.rating.count < b.rating.count)   result = (action.key.split(' ')[0] === 'Lowest' ? -1 : 1);
+        return result
       })
 
       return {
