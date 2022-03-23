@@ -10,8 +10,14 @@
 .cart-table{
 
   .cart-product{
+
     align-items: center;
     vertical-align: middle;
+
+    .cart-product-name{
+      text-decoration: none;
+      color: $gray-900;
+    }
 
     .cart-product-delete{
       color: $red-500;

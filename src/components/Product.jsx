@@ -20,7 +20,7 @@ const Product = ({product}) => {
       </Link>
       <div className="product-price">
         {product.price}$
-        { cart && cart.includes(product) ? <RemoveCartBtn /> : <AddCartBtn /> }
+        { cart && cart.find(item => item.id === product.id) ? <RemoveCartBtn /> : <AddCartBtn /> }
       </div>
     </div>
   )

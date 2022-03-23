@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { removeFromCart, updateCart } from "../actions/cart"
 import '../styles/Cart.scss'
 import {FiDelete} from 'react-icons/fi'
-
+import { Link } from "react-router-dom"
 const Cart = () => {
 
   const cart = useSelector(state => state.cart)
@@ -32,8 +32,8 @@ const Cart = () => {
       <tbody>
         {cart.map(product => (
           <tr className="cart-product" key={product.id}>
-            <th scope="row"><img src={product.image} height="60" alt="" /></th>
-            <td>{product.title}</td>
+            <th scope="row"><Link to={'/product/' + product.id}><img src={product.image} height="60" alt="" /></Link></th>
+            <td><Link className="cart-product-name" to={'/product/' + product.id}>{product.title}</Link></td>
             <td className="fw-bold">{product.price}$</td>
             <td>
               <div className="cart-product-amount-wrapper">
