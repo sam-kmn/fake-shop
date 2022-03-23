@@ -6,13 +6,14 @@ const Category = () => {
   
   const {id} = useParams();
   const categories = useSelector(state => state.categories.data)
-  const products = useSelector(state => state.products.data)
+  const productsData = useSelector(state => state.products.data)
+  const productsSortData = useSelector(state => state.products.sort.data)
 
-  const categoryProducts = products.filter(product => product.category === categories[id])
+  const products = (productsSortData.length ? productsSortData : productsData).filter(product => product.category === categories[id])
 
   return (
     <div className="container">
-      <ProductList products={categoryProducts}/>
+      <ProductList products={products}/>
     </div>
   )
 }

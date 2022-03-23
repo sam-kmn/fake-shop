@@ -6,7 +6,10 @@ import '../styles/Home.scss'
 
 const Home = () => {
   
-  const products = useSelector(state => state.products.data)
+  const productsData = useSelector(state => state.products.data)
+  const productsSortData = useSelector(state => state.products.sort.data)
+
+  const products = (productsSortData.length ? productsSortData : productsData)
 
   return (<>
     <div className="test">
