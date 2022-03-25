@@ -19,7 +19,7 @@
   }
 
   .navbar-nav{
-    gap: 2rem;
+    // gap: 2rem;
     align-items: center;
 
     .nav-item{
@@ -33,5 +33,11 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav{
+    gap: 2rem;
   }
 }

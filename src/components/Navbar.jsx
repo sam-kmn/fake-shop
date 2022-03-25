@@ -14,7 +14,7 @@ const Navbar = () => {
 
         <Link to={'/'} className="navbar-brand">Fake Shop</Link>
 
-        <div className='d-flex align-items-center gap-4 order-2 ps-md-5'>
+        <div className='d-flex align-items-center gap-4 order-lg-2 ps-md-5'>
 
           {cart && cart.length ? (
             <Link to={'/cart'} className='cart'>
@@ -29,8 +29,7 @@ const Navbar = () => {
 
         </div>
 
-
-        <div className="collapse navbar-collapse justify-content-end order-1" id="navbarNav">
+        <div className="collapse navbar-collapse justify-content-end order-lg-1 " id="navbarNav">
           <ul className="navbar-nav">
             {categories && categories.map((category, i) => (
               <li className="nav-item" key={i}>

@@ -24,11 +24,11 @@ const Product = () => {
   return (product ? (
     <div className="container p-3 p-lg-5 ">
       <div className="row justify-content-evenly align-items-center">
-        <div className="col-11 col-md col-lg-5 col-xl-4 mt-5">
+        <div className="col-12 col-md-8 col-lg-6 col-xl-5 mt-5">
           <img src={product.image} alt="product" className="img-fluid" />
         </div>
         
-        <div className="col-12 col-md-6 col-lg-6 mt-5">
+        <div className="col-12 col-lg-6 mt-5">
           <header className="fs-3 fw-bold">{product.title}</header>
           <p>{product.description}</p>
 
@@ -41,7 +41,7 @@ const Product = () => {
             </div>
           </div>
 
-          <div className="row justify-content-between mt-3 mt-xl-5 pt-lg-5">
+          <div className="row justify-content-between mt-5 pt-lg-5">
             <div className="col-auto">
               <div className="fs-3">Price: {product.price}$</div>
               <p className="fs-6 text-secondary">Shipping not included.</p>

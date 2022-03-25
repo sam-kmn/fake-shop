@@ -6,7 +6,7 @@
 
   #test-image{
     // background-image: url('../assets/shopping.jpg');
-    height: 25rem;
+    height: 15rem;
     width: 100vw;
     object-fit: cover !important;
   }
@@ -16,10 +16,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 6px rgba(66, 68, 90, 1);
-
+    white-space: nowrap;
   }
 
 }
 
+@media (min-width: 992px) {
+  #test-image{
+    height: 25rem !important;
+  }
+  #test-text{
+    font-size: 2.5rem !important;
+  }
+}
